@@ -26,4 +26,5 @@ function goSubmit(){
 	</form>
 </body>
 </html>
-	
+
+<!-- 수정2.. -->
