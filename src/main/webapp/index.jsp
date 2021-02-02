@@ -2,6 +2,5 @@
 <%@ include	file="/common/taglib.jsp"%>
 <%@ page import="java.util.*"%>
 <jsp:forward page="/statusBoardMain.do" />
-<!-- test중.. -->
-
-<!--  sub2로 작업한 branch 내용.. -->
+<!-- user2 수정내용입니다. -->
+<!-- user2로수정다시... -->
