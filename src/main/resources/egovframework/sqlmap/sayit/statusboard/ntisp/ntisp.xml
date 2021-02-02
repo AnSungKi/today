@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Ntisp">
+ 
+	<typeAlias alias="NtisVO" type="egovframework.sayit.statusboard.ntisp.NtispVO" />
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+ 
+ 
+ 	<select id="NtispDAO.totalCount" parameterClass="NtisVO" resultClass="int">
+		SELECT SUM(TOTAL_COUNT)  AS TOTAL_COUNT FROM ( 
+        SELECT SUM(TOTAL_COUNT) 
+        AS TOTAL_COUNT
+        FROM   STAT_NTISP
+        union all
+        SELECT sum(left) FROM (
+             SELECT ROWNUM rn, C.* FROM ( 
+             SELECT ST_YEAR startTime,
+                     LPAD(ST_ORDERS,2,'0') xmlNo,
+                     (ST_FM_ACC + ST_FF_ACC) left
+                FROM STAT_SEN_POP
+                ORDER BY ST_YEAR DESC, ST_MONTH DESC, ST_ORDERS
+                ) C
+            )D
+     <![CDATA[
+        WHERE rn <= xmlNo
+        ]]>
+      )
+	</select>
+ 
+	<select id="NtispDAO.list" parameterClass="NtisVO" resultClass="egovMap">
+		SELECT ADM_ORG_CODE as admOrgCode
+		    , CGG_NM as cggNm
+		    , UMD_NM as umdNm
+		    , TOTAL_COUNT as totalCount
+		    , TOTAL_MALE as totalMale
+		    , TOTAL_FEMALE as totalFemale
+		    , SEDAI 
+		FROM STAT_NTISP
+	</select>
+		
+</sqlMap>

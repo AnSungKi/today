@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="AllowIP">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="allowIPVO" type="egovframework.sayit.statusboard.allowip.AllowIPVO"/>
+
+	<resultMap id="ip" class="egovframework.sayit.statusboard.allowip.AllowIPVO">
+		<result property="ipallowIp" column="IPALLOW_IP" columnIndex="1"/>
+	</resultMap>
+
+    <select id="allowIP.selectAllowIP" parameterClass="allowIPVO" resultClass="egovMap">
+    	/*[allowIP.selectAllowIP]*/
+		SELECT IP
+		FROM   TB_IPALLOW
+		WHERE  IP LIKE #ipallowIp# || '%' 
+    </select>
+</sqlMap>

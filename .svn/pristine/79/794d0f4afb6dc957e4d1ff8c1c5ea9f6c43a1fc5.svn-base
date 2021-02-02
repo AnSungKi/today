@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Finance">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="financeVO" type="egovframework.sayit.statusboard.finance.FinanceVO"/>
+	
+	<resultMap id="budgetVO" class="egovframework.sayit.statusboard.finance.FinanceVO">
+		<result property="budget" column="BUDGET" columnIndex="1"/>
+ 	</resultMap>
+
+	<resultMap id="incomeVO" class="egovframework.sayit.statusboard.finance.FinanceVO">
+		<result property="income" column="INCOME" columnIndex="1"/>
+ 	</resultMap>
+
+	<resultMap id="expensesVO" class="egovframework.sayit.statusboard.finance.FinanceVO">
+		<result property="expenses" column="EXPENSES" columnIndex="1"/>
+ 	</resultMap>
+	
+	<select id="finance.selectTotalBuget" parameterClass="financeVO" resultMap="budgetVO">
+    	/*[finance.selectTotalBuget]*/
+        SELECT NVL(TRUNC(SUM (BGT_CURR_AMT)),0) AS BUDGET
+        FROM SJ_V_TBM_TECURRAMT
+        WHERE FIS_FG_CD='100' 
+        AND FIS_YEAR = #financeYear#
+    </select>	
+
+	<select id="finance.selectTotalIncome" parameterClass="financeVO" resultMap="incomeVO">
+    	/*[finance.selectTotalIncome]*/
+		SELECT NVL(SUM(DAY_INC_AMT),0) AS INCOME
+		FROM   V_FIOS_TBM_REVDESC
+		WHERE  1=1
+		AND    FIS_YEAR = #financeYear#
+    </select>	
+
+	<select id="finance.selectTotalExpenses" parameterClass="financeVO" resultMap="expensesVO">
+    	/*[finance.selectTotalExpenses]*/
+		SELECT NVL(SUM(EXPD_RESOL_AMT),0) AS EXPENSES
+		FROM   SJ_V_TCM_DATE_SUM
+		WHERE  1=1
+		AND    TAX_ACCOUNTING_YEAR = #financeYear#
+		<![CDATA[
+ 		AND    PAY_CMD_YMD >= #financeYear# || '0101'
+		AND    PAY_CMD_YMD <= (SELECT MAX(YMD) AS PAY_CMD_YMD
+		                       FROM   V_FIOS_TBM_REVDESC
+		                       WHERE  FIS_YEAR = #financeYear#) ]]>
+    </select>	
+</sqlMap>

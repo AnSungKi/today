@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+.basic_table {
+	width: 100%;
+	line-height: 1;
+	border-top: 1px solid #50585e;
+	border-bottom: 1px solid #959595
+}
+
+.basic_table th {
+	padding: 7px 5px;
+	font-size: 13px;
+}
+
+.basic_table td {
+	padding: 7px 5px;
+	font-size: 13px;
+}
+
+.basic_table thead th, .basic_table tbody th {
+	font-size: 13px;
+}
+
+/* print */
+.undefined {
+	
+}
+
+.undefined #contents {
+	width: auto;
+	margin: 2.5%
+}
+
+.undefined #contents .satisfaction {
+	display: none
+}
+
+/*버튼의 타겟링크*/
+.button a[target="_blank"] {
+	background: url(/images/prog/common/btn_bgtotal.gif)
+}
+
+/*세종시민의 생활[sub01_05_02]*/
+.indicators_wrap .indicators_list {
+	overflow: hidden;
+	width: 100%
+}
+
+.indicators_wrap .indicators_list li {
+	float: left;
+	margin-left: 3%;
+	margin-bottom: 3%;
+	height: 170px;
+	width: 16%;
+	border: 1px solid #dddddd;
+	border-radius: 5px
+}
+
+.indicators_wrap .indicators_list li p {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.indicators_wrap .indicators_list li p.indicators_tit {
+	margin-top: 10px;
+	padding-bottom: 5px;
+	width: 90%;
+	border-bottom: 1px dashed #d9d9d9;
+	text-align: center;
+}
+
+/*한눈에보는 세종_예정지역 통계현황[sub01_05]*/
+.stat_link h2 a {
+	color: #4c8bdb
+}
+
+/*홈페이지가이드_본인확인서비스*/
+.adult .adultwrap .center {
+	padding: 70% 0 20px;
+}
+
+/*satisfaction*/
+.satisfaction {
+	font-size: 14px
+}
+
+.satisfaction .survey_txt { /*margin:0 73px 0 360px*/
+	float: right;
+	margin: 0;
+}
+
+/*.survey_txt input[type="text"]{width:172px;height:0}*/
+.satisfaction .survey_txt label {
+	font-size: 13px
+}
+
+.satisfaction .research {
+	margin-left: 90px;
+}
+
+.satisfaction ul.star li input[type="radio"]+label {
+	margin-right: 0
+}
+
+label, input, button {
+	padding-right: 5px
+}
+
+/* groupZone	*/
+.row [class^='col-xs-'], .row [class^='col-sm-'], .row [class^='col-md-'],
+	.row [class^='col-lg-'] {
+	min-height: 1px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.col-sm-4 {
+	width: 32%;
+}
+
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3,
+	.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+	float: left;
+}
+
+.groupZone {
+	margin: 44px 0 80px;
+	padding-left: 1px;
+	display: inline-block;
+}
+
+.groupZone ul.depth1 li {
+	margin: -1px 0 0 -1px;
+	border: 1px solid #d7d7d7;
+	padding: 2px 0px;
+}
+
+.groupZone ul.depth1 li.on {
+	z-index: 2;
+	border: 1px solid #e53b6b;
+}
+
+.inner_content {
+	position: relative;
+}
+
+.inner_content .grep #obj01 .map {
+	overflow: hidden;
+	/* float: right; */
+	width: 561px;
+	height: 640px;
+	background: url(/images/stat/main/bg_map3.png) no-repeat 50% 50%;
+}
+
+.inner_content .legend {
+	position: absolute;
+	top: 30px;
+	right: 22px;
+}
+
+.inner_content .grep .obj .legend h3 {
+	display: block;
+	margin: 0;
+	padding: 0 80px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 26px;
+	text-align: center;
+}
+
+.inner_content .grep .obj .explanatory {
+	position: absolute;
+	left: 42px
+}
+
+.inner_content .grep #obj01 .explanatory {
+	top: 337px
+}
+
+.inner_content .grep #obj01 ul {
+	margin-left: 38px;
+}
+
+.inner_content .grep #obj01 ul li {
+	margin-bottom: 5px;
+	padding: 11px 10px 11px 57px;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.inner_content .grep #obj01 ul li.icon1 {background: url(/images/stat/main/explanatory_icon_01.png) no-repeat left 50%;}
+.inner_content .grep #obj01 ul li.icon2 {background: url(/images/stat/main/explanatory_icon_02.png) no-repeat left 50%;}
+.inner_content .grep #obj01 ul li.icon3 {background: url(/images/stat/main/explanatory_icon_03.png) no-repeat left 50%;}
+.inner_content .grep #obj01 ul li.icon4 {background: url(/images/stat/main/explanatory_icon_04.png) no-repeat left 50%;}
+.inner_content .grep #obj01 ul li.icon5 {background: url(/images/stat/main/explanatory_icon_05.png) no-repeat left 50%;}
+.inner_content .grep #obj01 .map span {position: absolute;display: inline-block;width: 62px;height: 20px;color: #fff;font-size: 13px;text-align: center;line-height: 20px;}
+
+.inner_content .grep #obj01 .map span.txt_village_01 {top: 33px;left: 95px;}
+.inner_content .grep #obj01 .map span.txt_village_02 {top: 148px;left: 72px;}
+.inner_content .grep #obj01 .map span.txt_village_03 {top: 163px;left: 185px;}
+.inner_content .grep #obj01 .map span.txt_village_04 {top: 283px;left: 259px;}
+.inner_content .grep #obj01 .map span.txt_village_05 {top: 316px;left: 175px;}
+.inner_content .grep #obj01 .map span.txt_village_06 {top: 356px;left: 319px;}
+.inner_content .grep #obj01 .map span.txt_village_07 {top: 423px;left: 284px;}
+.inner_content .grep #obj01 .map span.txt_village_08 {top: 449px;left: 212px;}
+.inner_content .grep #obj01 .map span.txt_village_09 {top: 466px;left: 115px;}
+.inner_content .grep #obj01 .map span.txt_village_10 {top: 530px;left: 182px;}
+.inner_content .grep #obj01 .map span.txt_village_11 {top: 421px;left: 415px;}
+.inner_content .grep #obj01 .map span.txt_village_12 {top: 572px;left: 295px;}
+.inner_content .grep #obj01 .map span.txt_village_13 {top: 310px;left: 22px;}
+.inner_content .grep #obj01 .map span.txt_village_14 {top: 561px;left: 42px;}
+.inner_content .grep #obj01 .map span.txt_village_15 {top: 400px;left: 22px;}
+.inner_content .grep #obj01 .map span.txt_village_16 {top: 498px;left: 284px;}
+.inner_content .grep #obj01 .map span.txt_village_17 {top: 605px;left: 172px;}

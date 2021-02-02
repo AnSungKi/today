@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+.bg-dark {border-bottom:3px solid #4c8bdb; background-color:#fff !important; background: url(../../images/statusboard/main/bg_navi_top.png) no-repeat center right 217px;}
+
+@media (max-width: 992px){
+.bg-dark {border-bottom:3px solid #4c8bdb; background-color:#fff !important; background: url(../../images/statusboard/main/bg_navi_top.png) no-repeat center right;}
+h2, .h2 { color: #5c9ee2; font-size: 1.1rem; padding:8px 0 0 18px; margin-top:8px; border-top:1px dashed #c3ccd9;}
+
+}
+
+
+
+
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {border-bottom:1px solid #505a6b; color: #fff}
+
+@media (min-width: 992px){
+#mainNav .navbar-collapse .navbar-sidenav { margin-top: 73px;}
+}
+
+.navbar-brand {padding-left: 18px;}
+
+
+@media (min-width: 992px){
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav {
+background: #3f4a5b url(../../images/statusboard/main/gnb_bg.png) no-repeat bottom center;
+}
+}
+
+#mainNav.fixed-top.navbar-dark .sidenav-toggler {
+    background-color: #272c35;
+}
+
+.card-header {border-top: 1px solid #d8d8d8; border-left: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8;font-size: 21px;font-weight: 600;}
+.card-body { border-left: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; height: 293px;}
+
+h2, .h2 { color: #5c9ee2; font-size: 1.3rem;}
+
+.list-group-item:first-child {
+	background: #4c8bdb; /* Old browsers */
+/* background: -moz-linear-gradient(-45deg, #0271be 1%, #34bfee 100%); FF3.6-15 */
+/* background: -webkit-linear-gradient(-45deg, #0271be 1%,#34bfee 100%); Chrome10-25,Safari5.1-6 */
+/* background: linear-gradient(135deg, #0271be 1%,#34bfee 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0271be', endColorstr='#34bfee',GradientType=1 ); IE6-9 fallback on horizontal gradient */
+margin: 0 10px;
+color:#fff;
+text-align: center;
+    font-size: 22px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.25rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body01 {
+    border-left: 0px solid #d8d8d8;
+    border-right: 0px solid #d8d8d8;
+    border-bottom: 0px solid #d8d8d8;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.fs_24{font-size:24px !important;}
+
+.table {
+   margin: 17px 15px 15px;
+    width: 95%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    font-size:20px;
+}
+
+.table th {
+    border-top: 0px solid #e9ecef;
+}
+
+.table th, .table td {
+	padding: 1rem;
+   text-align: center;
+}
+
+.line_3{background-color: #f7f7f7; !important;color: #0b419a;
+    font-weight: 600;}
+.right {text-align:right !important;}
+
+.label { padding:5px; color:#212529; border-radius:5px;}
+/* .label-default { background-color: #777 } */
+.label-default[href]:focus, .label-default[href]:hover { background-color: #5e5e5e }
+/* .label-primary { background-color: #337ab7 } */
+.label-primary[href]:focus, .label-primary[href]:hover { background-color: #286090 }
+/* .label-success { background-color: #5cb85c } */
+.label-success[href]:focus, .label-success[href]:hover { background-color: #449d44 }
+/* .label-info { background-color: #5bc0de } */
+.label-info[href]:focus, .label-info[href]:hover { background-color: #31b0d5 }
+/* .label-warning { background-color: #f0ad4e } */
+.label-warning[href]:focus, .label-warning[href]:hover { background-color: #ec971f }
+.label-danger { background-color: #d9534f }
+.label-danger[href]:focus, .label-danger[href]:hover { background-color: #c9302c }
+
+.bg-warning {
+    background-color: #2196f3 !important;
+}
+
+.bg-primary {
+    background-color: #4c8bdb !important;
+}
+
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+    color: #fff; font-weight: 600; font-size: 14px; background:#3f4a5b; padding:1em;
+}
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+    color: #ffffbe; font-weight: 600; font-size: 14px;
+} 
+
+
+
+
+h1.gnb_logo {float:left; width:100%; height:186px; background:#1e88e5; margin-bottom:0;}
+h1.gnb_logo > img {position:relative; top:32px; left:51px;}

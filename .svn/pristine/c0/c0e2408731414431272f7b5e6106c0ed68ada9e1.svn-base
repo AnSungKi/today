@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="egov.propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:/egovframework/egovProps/globals.properties</value>
+                <!-- value>file:/product/jeus/egovProps/globals.properties</value-->
+            </list>
+        </property>
+    </bean>
+
+	<!-- DataSource -->
+	<alias name="dataSource-oracle" alias="egov.dataSource"/>
+    <alias name="dataSource-oracle" alias="dataSource"/>
+    
+<!--     <alias name="dataSource-callcenter" alias="egov.sqlMapClientCs"/> -->
+<!--     <alias name="dataSource-callcenter" alias="dataSourceCall"/> -->
+    
+<!--     <alias name="dataSource-callcenter" alias="egov.dataSource"/> -->
+<!--     <alias name="dataSource-callcenter" alias="dataSource"/> -->
+
+	<!-- Oracle -->
+	<bean id="dataSource-oracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${Globals.DriverClassName}"/>
+		<property name="url" value="${Globals.Url}" />
+		<property name="username" value="${Globals.UserName}"/>
+		<property name="password" value="${Globals.Password}"/>
+	</bean>
+	
+	<alias name="dataSource-callcenter" alias="callcenter.dataSource"/>
+	
+	<bean id="dataSource-callcenter"
+	  	class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;databaseName=CALLCENTER_SEJONG" />
+		<property name="username" value="CSTEST" />
+		<property name="password" value="cstest" />
+	</bean>
+<!-- 	<bean id="dataSource-callcenter" -->
+<!-- 	  	class="org.springframework.jdbc.datasource.DriverManagerDataSource" > -->
+<!-- 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+<!-- 		<property name="url" value="jdbc:sqlserver://27.101.58.16:1433;databaseName=CALLCENTER_SEJONG" /> -->
+<!-- 		<property name="username" value="sayinfo" /> -->
+<!-- 		<property name="password" value="sayinfo1234!" /> -->
+<!-- 	</bean> -->
+</beans>

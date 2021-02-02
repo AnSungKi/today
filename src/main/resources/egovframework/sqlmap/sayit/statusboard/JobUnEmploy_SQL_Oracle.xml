@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="JobUnEmploy">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="jobVO" type="egovframework.sayit.statusboard.job.JobVO"/>
+	
+<!-- 	<resultMap id="home" class="egovframework.blog.HomeVO">
+		<result property="boardId" column="BOARD_ID" columnIndex="1"/>
+		<result property="title" column="TITLE" columnIndex="2"/>
+		<result property="creDate" column="CRE_DATE" columnIndex="3"/>
+		<result property="userId" column="USER_ID" columnIndex="4"/>
+		<result property="contents" column="CONTENTS" columnIndex="5"/>
+		<result property="boardStus" column="BOARD_STUS" columnIndex="6"/>
+	</resultMap> -->
+	
+	<select id="jobUnEmploy.selectTopUnemploy" parameterClass="jobVO" resultClass="egovMap">
+    	/*[jobUnEmploy.selectTopUnemploy]*/
+		SELECT A.UNEMPLOY_SEQ
+		      ,A.UNEMPLOY_TITLE
+		      ,A.UNEMPLOY_TOTAL
+		      ,A.UNEMPLOY_SEJONG
+		FROM   TB_UNEMPLOY A
+		      ,(SELECT MAX(UNEMPLOY_SEQ) AS UNEMPLOY_SEQ
+		        FROM   TB_UNEMPLOY) B
+		WHERE  A.UNEMPLOY_SEQ IN (B.UNEMPLOY_SEQ, B.UNEMPLOY_SEQ - 1)
+		ORDER BY UNEMPLOY_SEQ DESC      
+    </select>
+	
+    <select id="jobUnemploy.selectUnemployComboBox" parameterClass="jobVO" resultClass="egovMap">
+    	/*[jobUnemploy.selectUnemployComboBox]*/
+		SELECT DISTINCT UNEMPLOY_YEAR
+		FROM   TB_UNEMPLOY
+		ORDER BY UNEMPLOY_YEAR DESC     
+    </select>
+    
+	<select id="jobUnEmploy.selectUnEmpDatatableList" parameterClass="jobVO" resultClass="egovMap">
+    	/*[jobUnEmploy.selectUnEmpDatatableList]*/
+		SELECT UNEMPLOY_TITLE
+		      ,UNEMPLOY_TOTAL
+		      ,UNEMPLOY_SEJONG
+		FROM   TB_UNEMPLOY
+		WHERE  1 = 1
+        <isNotEmpty property="unemployYear">
+        AND    UNEMPLOY_YEAR = #unemployYear#
+        </isNotEmpty>
+		ORDER  BY UNEMPLOY_SEQ ASC
+    </select>
+	
+<!-- ************************************************************************************************ -->
+<!-- ************************************************************************************************ -->
+<!--                                 웨에꺼는 쓰는거 아래꺼는 안쓰는거                                -->
+<!-- ************************************************************************************************ -->
+<!-- ************************************************************************************************ -->
+	
+	<select id="jobUnEmploy.selectUnEmployPercent" parameterClass="jobVO" resultClass="egovMap">
+    	/*[jobUnEmploy.selectUnEmployPercent]*/
+		SELECT A.UNEMPLOY_SEJONG
+		FROM   TB_UNEMPLOY A
+		      ,(SELECT MAX(UNEMPLOY_SEQ) AS UNEMPLOY_SEQ
+		        FROM   TB_UNEMPLOY) B
+		WHERE  A.UNEMPLOY_SEQ = B.UNEMPLOY_SEQ
+    </select>
+	
+    <select id="jobUnEmploy.selectJsonUnEmployGrapeList" parameterClass="jobVO" resultClass="egovMap">
+    	/*[jobUnEmploy.selectJsonUnEmployGrapeList]*/
+		SELECT UNEMPLOY_TITLE
+              ,UNEMPLOY_TOTAL
+              ,UNEMPLOY_SEJONG
+        FROM   TB_UNEMPLOY
+        WHERE  1 = 1
+        <isNotEmpty property="unemployYear">
+        AND    UNEMPLOY_YEAR = #unemployYear#
+        </isNotEmpty>
+        ORDER  BY UNEMPLOY_SEQ ASC
+    </select>    
+
+<!--     <select id="jobUnEmploy.selectJsonUnEmployGrapeListSejong" parameterClass="jobVO" resultClass="egovMap"> -->
+<!--     	/*[jobUnEmploy.selectJsonUnEmployGrapeListSejong]*/ -->
+<!-- 		SELECT UNEMPLOY_TITLE -->
+<!--               ,UNEMPLOY_TOTAL -->
+<!--               ,UNEMPLOY_SEJONG -->
+<!--         FROM   TB_UNEMPLOY -->
+<!--         WHERE  1 = 1 -->
+<!--         <isNotEmpty property="unemployYear"> -->
+<!--         AND    UNEMPLOY_YEAR = #unemployYear# -->
+<!--         </isNotEmpty> -->
+<!--         ORDER  BY UNEMPLOY_SEQ ASC -->
+<!--     </select>     -->
+    
+    <insert id="jobUnEmploy.insertUnEmployRateInsertData">
+        /*[jobUnEmploy.insertUnEmployRateInsertData]*/
+		INSERT INTO TB_UNEMPLOY
+		  (UNEMPLOY_SEQ
+		  ,UNEMPLOY_TITLE
+		  ,UNEMPLOY_TOTAL
+	      ,UNEMPLOY_SEJONG
+	      ,UNEMPLOY_YEAR)
+		VALUES
+		  (SEQ_TB_UNEMPLOY_RATE_SEQ.NEXTVAL
+	      ,#unemployTitle#
+	      ,#unemployTotal#
+	      ,#unemploySejong#
+          ,#unemployYear#
+         )
+    </insert> 
+</sqlMap>

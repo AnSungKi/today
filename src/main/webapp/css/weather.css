@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* @import url(../font/NotoSansKr/font.css); */
+/* @import url(../font/NanumBarunGothic/font.css); */
+/* @import url(../font/Godo/font.css); */
+
+
+.pop_wrap_wt{ margin: auto;}
+
+	.top_pop_box{height:107px; background:#91eaf4 url(../images/top_box_img.jpg) no-repeat right top;  text-align:center; padding:17px 0 0 0;}
+		.top_pop_box > h1{color:#454545; font-size:30px; font-weight:600;}
+		.top_pop_box > h1 > span{color:#0f4bc6;}
+		.top_pop_box > h1 > em{font-weight:400;}
+		.top_txt_box{float: right;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    font-weight: 600;
+    background: #ecf0f3;
+    border-radius: 30px;y
+    padding: 7px 20px;
+    margin-top: 7px;
+    top: -70px;
+    position: relative;}
+		.top_txt_box span.top_line{ background:url(../images/top_box_line.gif) no-repeat right top; display:inline-block; padding-right:10px;}
+		.top_txt_box img{vertical-align:middle; margin:0 3px;}
+	
+	.con_pop_box_01{margin:0px 30px 0 0; background:#f8f8f8; border:1px solid #f1f1f1; text-align:center; padding:10px 0;}
+	.con_pop_box_02{margin:10px 10px 0 -20px; padding:20px; background:#fff;}
+		.con_pop_box_02_01{border:1px solid #f1f1f1; background:#fff; padding:15px 20px;}
+		.con_pop_box_02_01 h2{display:inline-block; background:url(../images/pop_bul_img.gif) no-repeat left 1px; padding-left:19px; font-size:14px; line-height:16px; color:#333333; font-weight:600;}
+		.con_pop_box_02_01 select{display:inline-block; border:1px solid #cfcfcf; height:26px; min-width:100px; margin-left:10px; font-size:12px;}	
+			.posi_re{position:relative; margin-bottom:10px;}
+			.posi_ab{position:absolute; right:0; top:10px; font-size:12px; color:#333333;}			
+			.pop_basic_table{width:100%; }
+			.pop_basic_table thead th{padding:5px; font-weight:600; font-size:14px; background-color:#f3f7ff; border-top:1px solid #7e7e7e;   color:#333333; }
+			.pop_basic_table tbody td{padding:5px; border-bottom:1px solid #e8e8e8;  color:#666666; font-size:14px; text-align:center;}
+			
+
+/* <p> 태그 스타일 온도 */
+/* 소정면, 전의면, 전동면, 조치원읍, 연서면, 연동면, 연기면, 부강면, 보람동, 금남면, 고운동, 아름동, 증촌동, 새롬동, 한솔동, 도담동 */
+#p_sjm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top:  33px;   left: 119px; letter-spacing: -1px;}
+#p_jwm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 174px;   left:  80px; letter-spacing: -1px;}
+#p_jdm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 177px;   left: 182px; letter-spacing: -1px;}
+#p_jcw {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 259.5px; left: 237px; letter-spacing: -1px;}
+#p_ysm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 313.5px; left: 175px; letter-spacing: -1px;}
+#p_ydm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 385px;   left: 306px; letter-spacing: -1px;}
+#p_ygm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 429px;   left: 250px; letter-spacing: -1px;}
+#p_bgm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 429px;   left: 393px; letter-spacing: -1px;}
+#p_brd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 579px;   left: 678px; letter-spacing: -1px;}
+#p_gnm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 577px;   left: 261px; letter-spacing: -1px;}
+#p_jgm {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 467px;   left: 118px; letter-spacing: -1px;}
+#p_gwd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 132px;   left: 566px; letter-spacing: -1px;}
+#p_ard {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 144px;   left: 630px; letter-spacing: -1px;}
+#p_jcd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 227px;   left: 628px; letter-spacing: -1px;}
+#p_srd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 318px;   left: 639px; letter-spacing: -1px;}
+#p_hsd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 417px;   left: 631px; letter-spacing: -1px;}
+#p_ddd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 209px;   left: 703px; letter-spacing: -1px;}
+
+/* 대평동 */
+#p_dpd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 580px;   left: 580px; letter-spacing: -1px;}
+
+/* 소담동 */
+#p_sdd {position: absolute; color: cornsilk; font-weight: 500; font-size: 14px; top: 508px;   left: 679px; letter-spacing: -1px;}
+
+
+
+/* <img> 태그 스타일 날씨 아이콘 */
+/* 소정면, 전의면, 전동면, 조치원읍, 연서면, 연동면, 연기면, 부강면, 보람동, 금남면, 고운동, 아름동, 증촌동, 새롬동, 한솔동, 도담동px */
+#img_sjm {width: 40px; height: 40px; position: absolute; top: 25px;  left: 163px;}
+#img_jwm {width: 40px; height: 40px; position: absolute; top: 166px; left: 123px;}
+#img_jdm {width: 40px; height: 40px; position: absolute; top: 170px; left: 227px;}
+#img_jcw {width: 40px; height: 40px; position: absolute; top: 251px; left: 283px;}
+#img_ysm {width: 40px; height: 40px; position: absolute; top: 305px; left: 220px;}
+#img_ydm {width: 40px; height: 40px; position: absolute; top: 377px; left: 348px;}
+#img_ygm {width: 40px; height: 40px; position: absolute; top: 420px; left: 296px;}
+#img_bgm {width: 40px; height: 40px; position: absolute; top: 422px; left: 439px;}
+#img_brd {width: 40px; height: 40px; position: absolute; top: 570px; left: 724px;}
+#img_gnm {width: 40px; height: 40px; position: absolute; top: 569px; left: 306px;}
+#img_jgm {width: 40px; height: 40px; position: absolute; top: 458px; left: 162px;}
+#img_gwd {width: 40px; height: 40px; position: absolute; top: 156px; left: 559px;}
+#img_ard {width: 40px; height: 40px; position: absolute; top: 136px; left: 673px;}
+#img_jcd {width: 40px; height: 40px; position: absolute; top: 226px; left: 669px;}
+#img_srd {width: 40px; height: 40px; position: absolute; top: 305px; left: 684px;}
+#img_hsd {width: 40px; height: 40px; position: absolute; top: 407px; left: 677px;}
+#img_ddd {width: 40px; height: 40px; position: absolute; top: 201px; left: 747px;}
+
+/* 대평동 */
+#img_dpd {width: 40px; height: 40px; position: absolute; top: 571px; left: 626px;}
+/* 소담동 */
+#img_sdd {width: 40px; height: 40px; position: absolute; top: 499px; left: 728px;}
+			
+table {font-size:15px;}
+table caption{position:relative; visibility:hidden; height:0; font-size:0;}
+.tbl_basic{width:100%;border-top:2px solid #585858; border-bottom:2px solid #585858; text-align:center;}
+.tbl_basic caption{height:0;line-height:0;}
+.tbl_basic th{padding: 7px 5px;  font-size: 15px; background: #f8f8f8; color: #222;}
+.tbl_basic th{margin-left:-1px; vertical-align:middle;}
+.tbl_basic td{padding:0 0; border-bottom:1px solid #ccc; margin-left:-1px; vertical-align:middle;}
+.tbl_basic td img{width: 30px; height: 30px;}
+.tbl_basic th.col_style{border-bottom:1px solid #fff;}
+.tbl_basic thead th { vertical-align:middle; border-bottom: 1px solid #ccc;}
+.tbl_basic tbody th {background:#f7f7f7; color:#333; vertical-align:middle;}
+.tbl_basic tfoot{background:none;}
+.tbl_basic .left{text-align:left;}
+.tbl_basic > tbody > tr > td > a {text-align: left; float: left;  color:#444444; font-weight:500; }
+.tbl_basic > tbody > tr > td > a:hover{text-decoration:underline;}
+.tbl_basic tr:hover {background-color:#fefef4;}
+.tbl_basic input[type="checkbox"]{border:none; height:27px;}
+.tbl_basic> tbody > tr > td > input[type="checkbox"]{border:none; height:auto;}			
+
+.box_left {    float: left;
+    position: absolute;
+    background: url(../images/sejongjido_new.png) no-repeat left top;
+    width: 875px;
+    height: 85%;}
+.box_right {    float: right;
+    width: 25%;}
+
+
+.mar_wt {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 72px 4% 15px 4%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 8px #cdd5db;
+    -webkit-box-shadow: 0 0 8px #cdd5db;
+    overflow: hidden;
+    position: relative;
+    top: -3px;
+}
+.h3_wt {
+    font-family: "Godo";
+    font-size: 24px;
+    font-weight: normal;
+    color: #015aaa;
+    min-height: 42px;
+    line-height: 42px;
+    padding: 0 0 12px 0px;
+    /* background: url(../images/common/h3_bul.png) no-repeat left top; */
+    position: absolute;
+    left: 4%;
+    width: 100%;
+    top: 17px;
+    box-sizing: border-box;
+}
+
+.pop-close{
+    position: absolute;
+    right: 0px;
+    top: -7px;
+    padding: 13px 0 0 0;
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 29px;
+    text-align: center;
+    background: gainsboro;
+    font-size: 15px;
+    font-family: 'ngn','나눔고딕','Dotum','arial','sans-serif';
+}
+
+.pop-close:hover {
+    background: crimson;
+    color: white;
+}
+.time_collec{
+	position: absolute;
+    left: 200px;
+    top: 28px;
+    color: #015aaa;
+    font-size: 15px;
+    font-family: "GoDo";
+}
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Population">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="populationVO" type="egovframework.sayit.statusboard.population.PopulationVO"/>
+	
+<!-- 	<resultMap id="countSotongVO" class="egovframework.sayit.statusboard.sotong.SotongVO"> -->
+<!-- 		<result property="count" column="COUNT" columnIndex="1"/> -->
+<!--  	</resultMap> -->
+	
+	<select id="population.selectPopulation" resultClass="egovMap">
+        SELECT SUM(TOTAL_COUNT)  AS TOTAL_COUNT FROM ( 
+        SELECT SUM(TOTAL_COUNT) 
+        AS TOTAL_COUNT
+        FROM   STAT_NTISP
+        union all
+        SELECT sum(left) FROM (
+             SELECT ROWNUM rn, C.* FROM ( 
+             SELECT ST_YEAR startTime,
+                     LPAD(ST_ORDERS,2,'0') xmlNo,
+                     (ST_FM_ACC + ST_FF_ACC) left
+                FROM STAT_SEN_POP
+                ORDER BY ST_YEAR DESC, ST_MONTH DESC, ST_ORDERS
+                ) C
+            )D
+     <![CDATA[
+        WHERE rn <= xmlNo
+        ]]>
+      )
+    </select>	
+</sqlMap>

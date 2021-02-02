@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+#sln{width:128px; z-index:9999;}
+#weather_box{padding-top:150px;text-align:center;margin-top:0}
+/*
+#weather_box h3{display:block;margin-bottom:20px;padding:0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background:none;color:#666;font-size:14px;line-height:20px;text-align:center;}
+*/
+#weather_box  h3{height:0;font-size:0;line-height:0;}
+#weather_box .txt_weather{}
+#weather_box .txt_weather span{display:block;}
+#weather_box .txt_weather span#txt_temp{display:block;margin:10px 0;color:#666;font-size:35px;line-height:36px;text-align:center;}
+#weather_box .txt_weather span#txt_day{margin-bottom:10px;padding:5px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;color:#666;font-size:14px;line-height:20px;text-align:center;}
+#sln .quick_lnk{display:none;}
+#sln .quick_lnk a{display:block;margin-bottom:10px;text-align:center;}
+#sln .quick_lnk a span{display:block;margin:0 auto 5px auto;width:50px;height:50px;background:url(/images/common/bg_quick.png) no-repeat center top;font-size:0;line-height:0;}
+#sln .quick_lnk a.gm01 .icon{background-position:50% 0;}
+#sln .quick_lnk a.gm02 .icon{background-position:50% -95px;}
+#sln .quick_lnk a.gm03 .icon{background-position:50% -189px;}
+#sln .quick_lnk a.gm04 .icon{background-position:50% -289px;}
+#sln .info{padding-top:55px;}
+#sln .info h3{display:block;margin:0 auto 30px auto;width:82px;height:45px;background:url(/images/common/tit_info2.png) no-repeat center top;font-size:0;line-height:0;}
+#sln .info a{display:block;margin:0 auto;padding:23px 0 0 0;width:98px;height:78px;color:#fff;font-size:18px;text-align:center; transition:padding-right .1s;}
+#sln .info a > span:first-child{display:block;font-size:13px;line-height:18px;text-align:center;}
+#sln .info a.info1{background:url(/images/common/bg_info1.png) no-repeat left top;}
+#sln .info a.info2{background:url(/images/common/bg_info2.png) no-repeat left top;}
+#sln .info a.info2 .increase {display:inline-block; margin-top:3px; padding-right:20px; font-size:18px; background:url('/images/common/people_increase.png'); background-repeat:no-repeat;}
+#sln .info a.info2 .increase.up {background-position:100% 2px;}
+#sln .info a.info2 .increase.down {background-position:100% -98px;}
+#sln .info a.info2 .increase.equl {background-position:100% 100px;}
+#sln .info a.info1:hover, #sln .info a.info2:hover {background-position:0 -200px;}
+#sln .info a:hover {padding-right:24px;}#sln .info p{margin-top:20px;padding:7px;border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;color:#666;font-size:14px;line-height:22px;text-align:center;}
+
+#sln .old_home{margin-top:20px; padding-left:10px;}
+#sln .old_home a{display:block; height:100px; width:100px; background:url(/images/common/old_home_ico.png) no-repeat 70% 50%;}
+#sln .old_home a span{display:block; font-size:16px; font-weight:bold; color:#0d77d0; padding-top:80px; text-align:center; line-height:130%;}
+
+/* quick stat */
+html.view_quick_stat {height:100%; overflow:hidden;}
+html.view_quick_stat body:after {content:''; display:block; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background-color:#000; opacity:.8; z-index:99999; background:url('/images/common/html_modal.png') repeat 0 0;}
+html.view_quick_stat #sln {display:none;}
+#quick_stat {top:0; right:0; width:1200px; min-height:701px; height:100%; z-index:199999; transition:right .5s;}
+.view_quick_stat #quick_stat {right:0;}
+#quick_stat.mvisual{height:100%;}
+
+#quick_stat.mvisual .inner_content{position:relative;width:1200px;height:701px;}
+#quick_stat.mvisual .inner_content:after{content:"";clear:both;display:block}
+#quick_stat.mvisual .inner_content .stat_title {margin:0; padding:30px 0 0; width:370px; height:170px; background:none; text-align:center;}
+#quick_stat.mvisual .inner_content .tab{display:inline-block;float:left;margin-left:7px;width:370px;height:701px;background:url(/images/stat/main/bg_tab.png) repeat 50% top;}
+html.view_quick_stat #quick_stat.mvisual .inner_content .tab{margin-left:0;}
+#quick_stat.mvisual .inner_content .tab a{display:block;padding:43px 20px 43px 110px;height:52px;background-color:#4b98ba;color:#fff;font-size:23px;line-height:120%;}
+#quick_stat.mvisual .inner_content .tab a span{display:block;font-size:15px;}
+#quick_stat.mvisual .inner_content .tab a.tab_ov{height:477px;background:none;}
+#quick_stat.mvisual .inner_content .tab a#tab01{background:#4b98ba url(/images/stat/main/icon_tab_01.png) no-repeat 42px 43px;}
+#quick_stat.mvisual .inner_content .tab a#tab01.tab_ov{background:url(/images/stat/main/icon_tab_01_ov.png) no-repeat 42px 43px;}
+#quick_stat.mvisual .inner_content .tab a#tab02{background:#4b98ba url(/images/stat/main/icon_tab_02.png) no-repeat 42px 43px;}
+#quick_stat.mvisual .inner_content .tab a#tab02.tab_ov{background:url(/images/stat/main/icon_tab_02_ov.png) no-repeat 42px 43px;}
+#quick_stat.mvisual .inner_content .grep{display:inline-block;float:right;margin-top:-150px;width:610px;}
+#quick_stat.mvisual .inner_content .grep .obj{width:100%}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory{position:absolute;left:42px}
+#quick_stat.mvisual .inner_content .grep #obj01 .explanatory{top:337px}
+#quick_stat.mvisual .inner_content .grep #obj01 ul{margin-left:38px;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li{margin-bottom:5px;padding:11px 10px 11px 57px;color:#fff;font-size:13px;line-height:20px;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li.icon1{background:url(/images/stat/main/explanatory_icon_01.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li.icon2{background:url(/images/stat/main/explanatory_icon_02.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li.icon3{background:url(/images/stat/main/explanatory_icon_03.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li.icon4{background:url(/images/stat/main/explanatory_icon_04.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 ul li.icon5{background:url(/images/stat/main/explanatory_icon_05.png) no-repeat left 50%;}
+
+#quick_stat.mvisual .inner_content .grep #obj01 p{display:block;padding:10px;color:#ffbf06;font-size:27px;text-align:center;border-bottom:1px dotted #fff;}
+
+#quick_stat.mvisual .inner_content .grep #obj01 .map{overflow:hidden;float:right;position:relative;margin:30px 0;width:561px;height:640px;background:url(/images/stat/main/bg_map.png) no-repeat 50% 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span{position:absolute;display:inline-block;width:62px;height:20px;color:#fff;font-size:13px;text-align:center;line-height:20px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_01{top:31px;left:95px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_02{top:144px;left:72px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_03{top:161px;left:204px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_04{top:279px;left:281px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_05{top:313px;left:194px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_06{top:353px;left:366px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_07{top:429px;left:307px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_08{top:414px;left:239px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_09{top:462px;left:95px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_10{top:478px;left:269px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_11{top:407px;left:464px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_12{top:569px;left:335px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .map span.txt_village_13{top:418px;left:161px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .explanatory{top:460px}
+#quick_stat.mvisual .inner_content .grep #obj02 ul{margin-left:38px;margin-bottom:10px;}
+#quick_stat.mvisual .inner_content .grep #obj02 ul.expl_list_01{margin-bottom:50px;}
+#quick_stat.mvisual .inner_content .grep #obj02 ul li{/*margin-bottom:5px;*//*padding:16px 10px 17px 80px*/padding:6px 10px 7px 80px;color:#fff;font-size:13px;/*line-height:20px;*/}
+#quick_stat.mvisual .inner_content .grep #obj02 ul li.icon1{background:url(/images/stat/main/explanatory_icon_06.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 ul li.icon2{background:url(/images/stat/main/explanatory_icon_07.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 ul li.icon3{background:url(/images/stat/main/explanatory_icon_08.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 ul li.icon4{background:url(/images/stat/main/explanatory_icon_09.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph{overflow:hidden;float:right;position:relative;margin-right:150px;width:100%;height:701px;background:url(/images/stat/main/bg_graph.png) no-repeat 50% 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box{position:absolute;top:175px;left:70px;width:502px;height:177px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span{position:absolute;display:inline-block;width:77px;height:20px;color:#fff;font-size:13px;text-align:center;line-height:20px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2010{top:165px;left:-10px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2011{top:165px;left:100px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2012{top:119px;left:204px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2013{top:99px;left:312px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2014{top:8px;right:6px;}
+
+#quick_stat.mvisual .inner_content .grep .obj .explanatory h3{display:block;margin:0;padding:0 100px;background:url(/images/stat/main/explanatory_tit2.png) no-repeat 50% 50%;color:#fff;font-size:14px;line-height:26px;text-align:center;}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory ul{margin-top:10px;margin-bottom:30px;margin-left:10px;}
+#quick_stat.mvisual .close_quick_stat {position:absolute; top:0; right:0; width:134px; height:128px; background:url('/images/common/quick_stat_close.png') no-repeat 50% 50%; font-size:0; overflow:hidden; text-indent:-999px;}
+
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span em { display: block; position: absolute; width: 85px; text-align: center;}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2010 em { top: -95px;width: 85px}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2011 em { top: -100px;width: 72px}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2012 em { top: -100px;width: 82px}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2013 em { top: -100px;width: 73px}
+#quick_stat.mvisual .inner_content .grep #obj02 .graph .box span.txt_2014 em { top: -93px; width: 70px}
+
+
+
+@media all and (min-width:1200px){
+/* #quick_stat {display:block; } */
+}
+
+@media all and (max-width:1280px){
+#weather_box{padding-top:180px;}
+}
+
+
+
+
+/*수정 150526*/
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table{width:305px;}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic{margin:0 0 15px;border-top-color:#3191b5;}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic thead th,
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic tbody th{padding:5px 10px;background:#0c5c81;font-size:11px;color:#fff;}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic td,
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic tfoot th{padding:5px 20px;font-size:11px;color:#fff;}
+#quick_stat.mvisual .inner_content .grep .obj .explanatory .data_table .tbl_basic tfoot{background:#267693;}
+#quick_stat.mvisual .inner_content .grep #obj02 .explanatory .data_table .tbl_basic{margin:10px 0 45px;}
+
+
+#quick_stat.mvisual .inner_content .grep #obj01 .explanatory{/*top:137px*/top:310px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .explanatory h3{display:none}
+#quick_stat.mvisual .inner_content .grep #obj01 p{/*display:block*/display:none;/*padding:10px*/padding:5px 20px;color:#ffbf06;/*font-size:27px*/font-size:15px;text-align:center;border-bottom:1px dotted #fff;}
+
+#quick_stat.mvisual .inner_content .grep #obj01 .map{overflow:hidden;/*float:right;*/right:140px;position:relative;margin:30px 80px;width:561px;height:640px;background:url(/images/stat/main/bg_map.png) no-repeat 50% 50%;}
+
+#quick_stat.mvisual .inner_content .grep #obj02 .graph{overflow:hidden;position:relative;width:100%;height:701px;/*right:165px*/right:75px;background:url(/images/stat/main/bg_graph.png) no-repeat 50% 50%;}
+
+
+/*통계범례:S*/
+#quick_stat.mvisual .inner_content .grep .obj .legend{position:absolute;top:365px;left:968px}
+#quick_stat.mvisual .inner_content .grep .obj .legend h3.bg_large{display:block;margin:0;padding:0 50px;background:url(/images/stat/main/explanatory_tit2.png) no-repeat 50% 50%;}
+#quick_stat.mvisual .inner_content .grep .obj .legend ul{margin-top:10px;margin-bottom:30px;margin-left:10px;}
+
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul{margin-left:38px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li{margin-bottom:5px;padding:11px 10px 11px 57px;color:#fff;font-size:13px;line-height:20px;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li.icon1{background:url(/images/stat/main/explanatory_icon_01.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li.icon2{background:url(/images/stat/main/explanatory_icon_02.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li.icon3{background:url(/images/stat/main/explanatory_icon_03.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li.icon4{background:url(/images/stat/main/explanatory_icon_04.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj01 .legend ul li.icon5{background:url(/images/stat/main/explanatory_icon_05.png) no-repeat left 50%;}
+
+#quick_stat.mvisual .inner_content .grep #obj02 .legend ul{margin-left:38px;margin-bottom:10px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .legend ul.expl_list_01{margin-bottom:50px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .legend ul li{margin-bottom:5px;padding:16px 10px 17px 80px;color:#fff;font-size:13px;line-height:20px;}
+#quick_stat.mvisual .inner_content .grep #obj02 .legend ul li.icon1{background:url(/images/stat/main/explanatory_icon_06.png) no-repeat left 50%;}
+#quick_stat.mvisual .inner_content .grep #obj02 .legend ul li.icon2{background:url(/images/stat/main/explanatory_icon_07.png) no-repeat left 50%;}
+/*통계범례:E*/
+
+
+#sln{display:none !important}

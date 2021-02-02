@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>시정현황판</title>
+  <link rel="stylesheet" href="../js/library/jquery-ui/jquery-ui.min.css">
+  <style>
+  	article { float:left; width:33%; height:500px }
+  	#popup iframe {width:100%; height:100%; background-color: #ffffff}
+	#popup {
+	    height: 80%; width:80%;
+	}
+  </style>
+  <script src="../js/library/jquery.js"></script>
+  <script src="../js/library/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/library/bpopup/jquery-bpopup.min.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( "#draggable" ).draggable({
+      connectToSortable: "#sortable",
+      helper: "clone",
+      revert: "invalid"
+    });
+  } );
+  
+  $( function() {
+	  $("#sotong").click(function() {
+		$('#popup').bPopup({
+	      easing: 'easeOutBack',
+		  speed: 650,
+	      transition: 'slideDown',
+	  	  transitionClose: 'slideBack'
+	 	});
+	  });
+  });
+  </script>
+</head>
+<body>
+
+<header>
+<h1>2017년 12월 21일 금요일의 세종의 뜻</h1>
+</header>
+<nav>
+</nav>
+<section id="sortable">
+	<article id="sotong" class="ui-state-default">
+		<h2>소통 현황판</h2>
+		<div>
+			<ul>
+				<li><span class="date">12.21(금)</span> 오호... 그 행사 너무 멋진것 같아요.</li>
+				<li class="main"><span class="date">12.21(금)</span> 세종시 도로가 혼잡해요. 도와주세요.</li>
+				<li><span class="date">12.21(금)</span> 결빙지역이 많습니다. 조치해주세요.</li>
+				<li><span class="date">12.21(금)</span> 시장님 오늘 추운데 고생많으셨어요.</li>
+				<li><span class="date">12.20(목)</span> 거기서 뭐하세요?</li>
+			</ul>
+		</div>	
+	</article>
+	
+	<article id="vote" class="ui-state-default">
+		<h2>설문 현황판</h2>
+		<div>
+			<ul>
+				<li>
+					<p><span class="poll-vote">설문투표</span>2017년 세종시에서 무엇을 느끼셨나요?</p>
+					<p class="item"><span class="title">참여자</span> : 104명</p>
+				</li>
+					<p><span class="road-vote">현장투표</span>대형마트의 휴무일은 언제가 좋은가요?</p>
+					<p class="item"><span class="title">현장</span> : 홈플러스 매장</p>
+					<p class="item"><span class="title">일시</span> : 2017.12.24일 18시</p>
+				</li>
+				<li>
+					<p><span class="sms-vote">문자투표</span>똑똑세종 자문단 활성화를 위한 방안은?</p>
+					<p class="item"><span class="title">참여자</span> : 똑똑세종 자문단</p>
+					<p class="item"><span class="title">참여기간</span> : 2017.12.21 ~ 2017.12.25</p>
+				</li>
+			</ul>
+		</div>		
+	</article>
+	
+	<article id="event" class="ui-state-default">
+		<h2>오늘의 행사</h2>
+		<div>
+			<h3>2017년 12월 21일(금)</h3>
+			<ul>
+				<li><span class="time">09:00</span> 정책조정회의</li>
+				<li class="main"><span class="time">10:00</span>  본 회의 5차 <span class="dtime">- 00:35</span></li>
+				<li><span class="time">14:00</span> 제6회 세종시 자원봉사 대회</li>
+				<li><span class="time">14:30</span> 사회적경제 시민아카데미 수료식 및 타운홀미팅</li>
+			</ul>
+		</div>	
+	</article>
+
+	<article id="job" class="ui-state-default">
+		<h2>일자리 현황판</h2>
+		<div>
+			- 그래프 - 
+		</div>	
+	</article>
+
+	<article id="finance" class="ui-state-default">
+		<h2>재정 현황판</h2>
+		<div>
+			- 그래프 - 
+		</div>	
+	</article>
+
+	<article id="indicators" class="ui-state-default">
+		<h2>지표 현황판</h2>
+		<div>
+			- 그래프 - 
+		</div>	
+	</article>
+</section>
+
+<div id="popup2">
+	<iframe src="./app/chart.html" frameborder="0" allowfullscreen></iframe>
+</div>
+<div id="popup">
+	<iframe src="../js/library/chart/samples/charts/bar/vertical.html" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+<footer>
+
+</footer>
+</body>
+</html>

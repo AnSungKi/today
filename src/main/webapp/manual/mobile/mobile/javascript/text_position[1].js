@@ -1,0 +1,1 @@
+﻿positionForPages[1]={page:1,positions:[{word:"시민투표 세종의뜻",left:0.587718,top:0.126788,width:0.213846,height:0.037111},{word:"모바일투표 관리자 매뉴얼",left:0.620795,top:0.214143,width:0.358992,height:0.044489},{word:"2018-04-04",left:0.893538,top:0.287676,width:0.084387,height:0.024778}]};
