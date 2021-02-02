@@ -3,3 +3,4 @@
 <%@ page import="java.util.*"%>
 <jsp:forward page="/statusBoardMain.do" />
 <!-- user2 수정내용입니다. -->
+<!-- user2로수정다시... -->
